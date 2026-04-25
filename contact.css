@@ -1,0 +1,9 @@
+body {
+    background: #fd79a8;
+    text-align: center;
+}
+
+input, textarea {
+    padding: 10px;
+    width: 200px;
+}
