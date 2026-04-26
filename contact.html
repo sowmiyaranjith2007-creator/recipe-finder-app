@@ -1,17 +1,50 @@
+<!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="contact.css">
+    <title>📞 Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
-
-<h1>Contact Us</h1>
-
-<form>
-    <input type="text" placeholder="Name"><br><br>
-    <input type="email" placeholder="Email"><br><br>
-    <textarea placeholder="Message"></textarea><br><br>
-    <button>Send</button>
-</form>
-
+    <div class="container">
+        <h1>📞 Get In Touch</h1>
+        <p class="subtitle">Share your feedback or recipe requests!</p>
+        
+        <form class="contact-form">
+            <div class="input-group">
+                <input type="text" id="name" required placeholder=" ">
+                <label for="name">Full Name</label>
+            </div>
+            
+            <div class="input-group">
+                <input type="email" id="email" required placeholder=" " email="true">
+                <label for="email">Email Address</label>
+            </div>
+            
+            <div class="input-group full-width">
+                <textarea id="message" required rows="5" placeholder=" "></textarea>
+                <label for="message">Your Message</label>
+            </div>
+            
+            <button type="submit">Send Message ✨</button>
+        </form>
+        
+        <div class="contact-info">
+            <h3>Or Reach Us Here</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span>📧</span>
+                    <p>recipes@chennaifood.com</p>
+                </div>
+                <div class="info-item">
+                    <span>📱</span>
+                    <p>+91 44 1234 5678</p>
+                </div>
+                <div class="info-item">
+                    <span>📍</span>
+                    <p>Chennai, Tamil Nadu</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
