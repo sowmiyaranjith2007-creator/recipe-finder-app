@@ -1,58 +1,87 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>🍳 Breakfast Recipes</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+}
 
-<h1>🍳 Breakfast Recipes</h1>
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background: #2d3436;
+    padding: 15px;
+}
 
-<div class="container">
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
 
-    <!-- Idli -->
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&q=80" alt="Idli">
-        <h2>Idli</h2>
+.navbar a:hover {
+    background: #fdcb6e;
+    color: black;
+}
 
-        <h3>Ingredients:</h3>
-        <ul>
-            <li>2 cups rice</li>
-            <li>1 cup urad dal</li>
-            <li>Salt</li>
-            <li>Water</li>
-        </ul>
+/* Heading */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
 
-        <h3>Steps:</h3>
-        <ol>
-            <li>Soak rice and dal separately for 6 hours.</li>
-            <li>Grind into smooth batter.</li>
-            <li>Ferment overnight.</li>
-            <li>Pour into idli moulds.</li>
-            <li>Steam for 10-12 minutes.</li>
-        </ol>
-    </div>
+/* Container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 
-    <!-- Dosa -->
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80" alt="Dosa">
-        <h2>Dosa</h2>
+/* Card */
+.card {
+    background: white;
+    width: 280px;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
 
-        <h3>Ingredients:</h3>
-        <ul>
-            <li>2 cups rice</li>
-            <li>1/2 cup urad dal</li>
-            <li>Salt</li>
-        </ul>
+.card:hover {
+    transform: scale(1.05);
+}
 
-        <h3>Steps:</h3>
-        <ol>
-            <li>Soak rice and dal for 6 hours.</li>
-            <li>Grind and ferment batter.</li>
-            <li>Heat pan and pour batter.</li>
-            <li>Spread thin and cook.</li>
-            <li>Flip and serve hot.</li>
-        </ol>
-    </div>
+/* Image */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
 
-    <!-- Pong
+/* Titles */
+.card h2 {
+    text-align: center;
+    color: #e17055;
+}
+
+/* Text */
+ul, ol {
+    padding-left: 20px;
+}
+
+li {
+    margin: 5px 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+    }
+}
