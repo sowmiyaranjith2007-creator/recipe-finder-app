@@ -1,48 +1,93 @@
-<!DOCTYPE html>
+
+        
+  <!DOCTYPE html>
 <html>
 <head>
     <title>🍳 Breakfast Recipes</title>
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            background: #2d3436;
+            padding: 15px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            width: 280px;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
 </head>
+
 <body>
 
-<!-- Navbar -->
 <div class="navbar">
-    <a href="index.html">🍳 Breakfast</a>
-    <a href="lunch.html">🍛 Lunch</a>
-    <a href="dinner.html">🌙 Dinner</a>
-    <a href="dessert.html">🍮 Dessert</a>
+    <a href="#">Breakfast</a>
 </div>
 
 <h1>🍳 Breakfast Recipes</h1>
 
 <div class="container">
 
-<!-- Idli -->
 <div class="card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Idli_Sambar.jpg" alt="Idli">
-    <h2>Idli</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Idli_Sambar.jpg">
+<h2>Idli</h2>
+<p>Soft steamed rice cakes.</p>
+</div>
 
-    <h3>Ingredients</h3>
-    <ul>
-        <li>2 cups rice</li>
-        <li>1 cup urad dal</li>
-        <li>Salt</li>
-        <li>Oil</li>
-    </ul>
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Dosa_with_chutney.jpg">
+<h2>Dosa</h2>
+<p>Crispy South Indian crepe.</p>
+</div>
 
-    <h3>Steps</h3>
-    <ol>
-        <li>Make dough.</li>
-        <li>Roll small circles.</li>
-        <li>Deep fry in hot oil.</li>
-        <li>Serve with curry.</li>
-    </ol>
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Ven_Pongal.jpg">
+<h2>Pongal</h2>
+<p>Rice and dal dish.</p>
+</div>
+
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Poori_with_bhaji.jpg">
+<h2>Poori</h2>
+<p>Deep fried bread.</p>
 </div>
 
 </div>
 
 </body>
 </html>
-        
-  
