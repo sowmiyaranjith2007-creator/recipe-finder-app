@@ -1,99 +1,58 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>🍛 Lunch Recipes</title>
-    <link rel="stylesheet" href="lunch.css">
-</head>
-<body>
 
-<h1>🍛 Lunch Recipes</h1>
+body {
+    background-color: #81ecec;
+    background-image: 
+        linear-gradient(rgba(129, 236, 236, 0.85), rgba(129, 236, 236, 0.85)),
+        url('https://pplx-res.cloudinary.com/image/upload/pplx_search_images/31800240a5a49be416fd0b169a1a7af6e63a48a2.jpg');
+    background-size: 180px auto;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
 
-<div class="recipe">
-    <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/d183931a51375ce4aecd45c22e435dd2f803a793.jpg" alt="South Indian Thali">
-    <h3>South Indian Thali</h3>
+h1 {
+    font-size: 2.5em;
+    background: linear-gradient(135deg, #fdcb6e, #e17055);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-    <div class="ingredients">
-        <h4>Ingredients</h4>
-        <ul>
-            <li>Rice</li>
-            <li>Toor dal</li>
-            <li>Mixed vegetables (carrot, beans, drumstick)</li>
-            <li>Tamarind</li>
-            <li>Sambar powder</li>
-            <li>Rasam powder</li>
-            <li>Curd, pickle, papad</li>
-        </ul>
-    </div>
+.recipe {
+    margin: 30px auto;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
 
-    <div class="steps">
-        <h4>Steps</h4>
-        <ol>
-            <li>Cook rice and dal separately.</li>
-            <li>Prepare sambar using dal, vegetables, tamarind, and sambar powder.</li>
-            <li>Make rasam using tamarind water and rasam powder.</li>
-            <li>Fry papad and arrange with curd and pickle.</li>
-            <li>Serve everything together as a thali.</li>
-        </ol>
-    </div>
-</div>
+.recipe:hover {
+    transform: translateY(-10px) scale(1.02);
+}
 
-<div class="recipe">
-    <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/54787f27f6173a8f9deb86ee5db2de123959301c.jpg" alt="Chicken Biryani">
-    <h3>Chicken Biryani</h3>
+.recipe img {
+    width: 100%;
+    height: 220px;
+    border-radius: 15px;
+    object-fit: cover;
+}
 
-    <div class="ingredients">
-        <h4>Ingredients</h4>
-        <ul>
-            <li>Basmati rice</li>
-            <li>Chicken</li>
-            <li>Yogurt</li>
-            <li>Onions</li>
-            <li>Ginger-garlic paste</li>
-            <li>Spices (garam masala, turmeric, chili powder)</li>
-            <li>Mint and coriander leaves</li>
-        </ul>
-    </div>
+.recipe h3 {
+    color: #00b894;
+}
 
-    <div class="steps">
-        <h4>Steps</h4>
-        <ol>
-            <li>Marinate chicken with yogurt and spices for 1 hour.</li>
-            <li>Cook rice until 70% done.</li>
-            <li>Fry onions until golden brown.</li>
-            <li>Layer chicken and rice in a pot.</li>
-            <li>Cook on low flame (dum) for 20 minutes.</li>
-        </ol>
-    </div>
-</div>
+.ingredients, .steps {
+    text-align: left;
+}
 
-<div class="recipe">
-    <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/f126b29bc8b40a11e07898e36a38df3af2cf3175.jpg" alt="Dal Rice">
-    <h3>Dal Chawal</h3>
+.ingredients h4, .steps h4 {
+    color: #e17055;
+}
 
-    <div class="ingredients">
-        <h4>Ingredients</h4>
-        <ul>
-            <li>Toor dal</li>
-            <li>Rice</li>
-            <li>Onion and tomato</li>
-            <li>Garlic</li>
-            <li>Cumin seeds</li>
-            <li>Turmeric and chili powder</li>
-            <li>Ghee</li>
-        </ul>
-    </div>
-
-    <div class="steps">
-        <h4>Steps</h4>
-        <ol>
-            <li>Pressure cook dal with turmeric and salt.</li>
-            <li>Prepare tempering with ghee, cumin, and garlic.</li>
-            <li>Add cooked dal and simmer.</li>
-            <li>Cook rice separately.</li>
-            <li>Serve dal over rice with ghee.</li>
-        </ol>
-    </div>
-</div>
-
-</body>
-</html>
+ul, ol {
+    padding-left: 20px;
+}
