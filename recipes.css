@@ -1,80 +1,69 @@
+
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #ffe0cc, #fff5e6);
+    font-family: Arial, sans-serif;
+
+    /* Kitchen theme background */
+    background-image: url("https://source.unsplash.com/1600x900/?kitchen,food");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
 }
 
-/* Header */
+/* Dark overlay for readability */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: -1;
+}
+
 header {
     text-align: center;
     padding: 30px;
-    background: #ff704d;
-    color: white;
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 35px;
-}
-
-header p {
-    margin-top: 5px;
-    font-size: 16px;
-}
-
-/* Container */
-.container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 40px;
-    flex-wrap: wrap;
-}
-
-/* Card Design */
-.card {
-    width: 260px;
-    background: white;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Hover Effect */
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-}
-
-/* Image */
-.img-box img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-/* Content */
-.content {
-    padding: 15px;
-}
-
-.content h2 {
-    color: #ff6600;
+    font-size: 40px;
     margin-bottom: 10px;
 }
 
-.content p {
-    font-size: 14px;
-    color: #444;
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    width: 250px;
+    text-align: center;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h2 {
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 14px;
 }
