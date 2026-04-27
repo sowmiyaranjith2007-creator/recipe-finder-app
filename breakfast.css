@@ -1,76 +1,148 @@
-body {
-    background-color: #81ecec;
-    /* Food-themed texture overlay */
-    background-image: 
-        linear-gradient(rgba(129, 236, 236, 0.85), rgba(129, 236, 236, 0.85)),
-        url('https://pplx-res.cloudinary.com/image/upload/pplx_search_images/31800240a5a49be416fd0b169a1a7af6e63a48a2.jpg');
-    background-size: 180px auto;
-    background-attachment: fixed;
-    background-position: center;
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-    min-height: 100vh;
-    margin: 0;
-    padding: 20px;
-    color: #2d3436;
-}
 
-h1 {
-    font-size: 2.5em;
-    background: linear-gradient(135deg, #fdcb6e, #e17055);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 40px;
-    text-shadow: none;
-    animation: fadeInDown 1s ease-out;
-}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🍳 Breakfast Recipes</title>
+    <style>
+        body {
+            background-color: #81ecec;
+            /* Food-themed texture overlay */
+            background-image: 
+                linear-gradient(rgba(129, 236, 236, 0.85), rgba(129, 236, 236, 0.85)),
+                url('https://pplx-res.cloudinary.com/image/upload/pplx_search_images/31800240a5a49be416fd0b169a1a7af6e63a48a2.jpg');
+            background-size: 180px auto;
+            background-attachment: fixed;
+            background-position: center;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            color: #2d3436;
+        }
 
-.recipe {
-    margin: 30px auto;
-    display: inline-block;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        h1 {
+            font-size: 2.5em;
+            background: linear-gradient(135deg, #fdcb6e, #e17055);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 40px;
+            text-shadow: none;
+            animation: fadeInDown 1s ease-out;
+        }
 
-.recipe:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-}
+        .recipe {
+            margin: 30px auto;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-.recipe img {
-    width: 320px;
-    height: 220px;
-    border-radius: 20px;
-    object-fit: cover;
-    transition: transform 0.4s ease, filter 0.4s ease;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
+        .recipe:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
 
-.recipe:hover img {
-    transform: scale(1.1);
-    filter: brightness(1.1) saturate(1.2);
-}
+        .recipe img {
+            width: 320px;
+            height: 220px;
+            border-radius: 20px;
+            object-fit: cover;
+            transition: transform 0.4s ease, filter 0.4s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
 
-.recipe h3 {
-    font-size: 1.8em;
-    margin: 15px 0 0;
-    color: #00b894;
-    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
-}
+        .recipe:hover img {
+            transform: scale(1.1);
+            filter: brightness(1.1) saturate(1.2);
+        }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .recipe img {
-        width: 280px;
-        height: 190px;
-    }
-    
-    h1 {
-        font-size: 2em;
-    }
-}
+        .recipe h3 {
+            font-size: 1.8em;
+            margin: 15px 0 10px;
+            color: #00b894;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+        }
 
-/* Keyframe animations */
-@keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+        .ingredients, .steps {
+            text-align: left;
+            margin-top: 15px;
+        }
+
+        .ingredients h4, .steps h4 {
+            color: #e17055;
+            border-bottom: 2px solid #fdcb6e;
+            padding-bottom: 5px;
+        }
+
+        .ingredients ul, .steps ol {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+
+        .ingredients li, .steps li {
+            margin: 8px 0;
+            padding: 5px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .recipe img {
+                width: 280px;
+                height: 190px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+
+            .recipe {
+                max-width: 90%;
+            }
+        }
+
+        /* Keyframe animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<h1>🍳 Breakfast Recipes</h1>
+
+<div class="recipe">
+    <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/62fc80aa6bdf7b34ea203204fd1607708352acb4.jpg" alt="Masala Dosa with Chutney" loading="lazy">
+    <h3>Masala Dosa</h3>
+    <div class="ingredients">
+        <h4>Key Ingredients (for batter & filling)</h4>
+        <ul>
+            <li>3 cups sona masuri rice, 1 cup urad dal, ½ tsp methi seeds (for batter)</li>
+            <li>3 boiled & mashed potatoes, 1 onion, green chilies, ginger, curry leaves</li>
+            <li>Spices: mustard seeds, turmeric, salt, lemon juice, coriander leaves</li>
+        </ul>
+    </div>
+    <div class="steps">
+        <h4>Steps to Cook</h4>
+        <ol>
+            <li>Soak rice (4 hrs) & dal (2 hrs) separately, grind to batter, ferment 8 hrs.[web:4]</li>
+            <li>Prepare aloo bhaji: Temper oil with mustard, dals, chilies, ginger; sauté onion, add mashed potatoes, turmeric, salt, lemon & coriander.[page:0]</li>
+            <li>Heat tawa, spread thin batter into crisp dosa, add butter, place 2 tbsp aloo masala in center, fold & serve hot.[web:4]</li>
+        </ol>
+    </div>
+</div>
+
+<div class="recipe">
+    <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/f66c25bbbbca454c800141a4a222bcc4d1a5af31.jpg" alt="Idli with Sambar" loading="lazy">
+    <h3>Idli with Sambar</h3>
+    <p>South Indian steamed rice cakes served with flavorful lentil-vegetable sambar. Perfect healthy breakfast option.[web:17]</p>
+</div>
+
+</body>
+</html>
